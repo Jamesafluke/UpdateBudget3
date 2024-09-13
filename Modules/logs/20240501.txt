@@ -1,0 +1,40 @@
+01/05/2024 07:50:31 AM - Main - Welcome to Budginator!
+01/05/2024 07:50:31 AM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+01/05/2024 07:50:31 AM - Main - Backlog: Include an auto LastUpdated field on the budget.
+01/05/2024 07:50:31 AM - SetAccountHistoryPaths - Laptop detected.
+01/05/2024 07:50:38 AM - Main - Welcome to Budginator!
+01/05/2024 07:50:38 AM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+01/05/2024 07:50:38 AM - Main - Backlog: Include an auto LastUpdated field on the budget.
+01/05/2024 07:50:38 AM - SetAccountHistoryPaths - Laptop detected.
+01/05/2024 07:50:40 AM - SelectMonth - Selected month is December
+01/05/2024 07:50:40 AM - ImportAccountHistory - 1280 items in accountHistory0
+01/05/2024 07:50:40 AM - ImportAccountHistory - 2587 items in accountHistory1
+01/05/2024 07:50:40 AM - ImportAccountHistory - 3867 total items in account history.
+01/05/2024 07:50:40 AM - ImportAccountHistory - After trimming extraneous months and years there are 0.
+01/05/2024 07:50:40 AM - ImportExistingBudget - Importing budget data from 2024Budget.xlsx
+01/05/2024 07:50:40 AM - ImportExistingBudget - abbmonthName is May
+01/05/2024 07:50:40 AM - ImportExistingBudget - xlsx path is: C:\Users\jfluckiger\OneDrive\Budget\2024Budget.xlsx
+01/05/2024 07:50:45 AM - Deduplicate - There are 0 items in the existing budget.
+01/05/2024 07:50:45 AM - Deduplicate - There are 0 duplicates.
+01/05/2024 07:50:45 AM - Deduplicate - There are 0 expenses before arbitrary exceptions.
+01/05/2024 07:50:45 AM - ArbitraryExceptionsRemove - Removed 0 arbitrary exceptions.
+01/05/2024 07:50:45 AM - ExportExpenses - No expenses to export.
+01/05/2024 07:50:57 AM - Main - Welcome to Budginator!
+01/05/2024 07:50:57 AM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+01/05/2024 07:50:57 AM - Main - Backlog: Include an auto LastUpdated field on the budget.
+01/05/2024 07:50:57 AM - SetAccountHistoryPaths - Laptop detected.
+01/05/2024 07:51:03 AM - SelectMonth - Selected month is December
+01/05/2024 07:51:03 AM - ImportAccountHistory - 1280 items in accountHistory0
+01/05/2024 07:51:03 AM - ImportAccountHistory - 2587 items in accountHistory1
+01/05/2024 07:51:03 AM - ImportAccountHistory - 3867 total items in account history.
+01/05/2024 07:51:03 AM - ImportAccountHistory - After trimming extraneous months and years there are 84.
+01/05/2024 07:51:03 AM - ImportExistingBudget - Importing budget data from 2024Budget.xlsx
+01/05/2024 07:51:03 AM - ImportExistingBudget - abbmonthName is Apr
+01/05/2024 07:51:03 AM - ImportExistingBudget - xlsx path is: C:\Users\jfluckiger\OneDrive\Budget\2024Budget.xlsx
+01/05/2024 07:51:03 AM - Deduplicate - There are 71 items in the existing budget.
+01/05/2024 07:51:03 AM - Deduplicate - There are 69 duplicates.
+01/05/2024 07:51:03 AM - Deduplicate - There are 15 expenses before arbitrary exceptions.
+01/05/2024 07:51:03 AM - ArbitraryExceptionsRemove - Removed 4 arbitrary exceptions.
+01/05/2024 07:51:03 AM - ExportExpenses - Exporting 11 expenses to xlsx.
+01/05/2024 07:51:03 AM - ExportExpenses - Export to csv successful.
+01/05/2024 07:51:07 AM - DeleteAccountHistoryFiles - Deleting C:\Users\jfluckiger\Downloads\AccountHistory.csv C:\Users\jfluckiger\Downloads\AccountHistory (1).csv[0] and C:\Users\jfluckiger\Downloads\AccountHistory.csv C:\Users\jfluckiger\Downloads\AccountHistory (1).csv[1]

@@ -1,0 +1,18 @@
+06/07/2024 07:16:08 AM - Main - Welcome to Budginator!
+06/07/2024 07:16:08 AM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+06/07/2024 07:16:08 AM - Main - Backlog: Include an auto LastUpdated field on the budget.
+06/07/2024 07:16:14 AM - SelectMonth - Selected month is July
+06/07/2024 07:16:15 AM - ImportAccountHistory - 2714 items in accountHistory0
+06/07/2024 07:16:15 AM - ImportAccountHistory - 1303 items in accountHistory1
+06/07/2024 07:16:15 AM - ImportAccountHistory - 4017 total items in account history.
+06/07/2024 07:16:15 AM - ImportAccountHistory - After trimming extraneous months and years there are 4.
+06/07/2024 07:16:15 AM - ImportExistingBudget - Importing budget data from 2024Budget.xlsx
+06/07/2024 07:16:15 AM - ImportExistingBudget - abbmonthName is Jul
+06/07/2024 07:16:15 AM - ImportExistingBudget - xlsx path is: C:\Users\jfluckiger\OneDrive\Budget\2024Budget.xlsx
+06/07/2024 07:16:16 AM - Deduplicate - There are 0 items in the existing budget.
+06/07/2024 07:16:16 AM - Deduplicate - There are 0 duplicates.
+06/07/2024 07:16:16 AM - Deduplicate - There are 4 expenses before arbitrary exceptions.
+06/07/2024 07:16:16 AM - ArbitraryExceptionsRemove - Removed 0 arbitrary exceptions.
+06/07/2024 07:16:16 AM - ExportExpenses - Exporting 4 expenses to xlsx.
+06/07/2024 07:16:16 AM - ExportExpenses - Export to csv successful.
+06/07/2024 07:16:19 AM - DeleteAccountHistoryFiles - Deleting C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory.csv C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory (1).csv[0] and C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory.csv C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory (1).csv[1]

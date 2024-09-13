@@ -1,0 +1,20 @@
+16/07/2024 06:19:52 AM - Main - Welcome to Budginator!
+16/07/2024 06:19:52 AM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+16/07/2024 06:19:52 AM - Main - Backlog: Include an auto LastUpdated field on the budget.
+16/07/2024 06:19:58 AM - SelectMonth - Selected month is July
+16/07/2024 06:19:58 AM - ImportAccountHistory - 2746 items in accountHistory0
+16/07/2024 06:19:58 AM - ImportAccountHistory - 1311 items in accountHistory1
+16/07/2024 06:19:58 AM - ImportAccountHistory - 4057 total items in account history.
+16/07/2024 06:19:58 AM -  - Found a pending @{Account Number=750501095729; Post Date=//; Check=; Description=Ch JesusChrist 202407151204337 - DONATION; Debit=1077.90; Credit=; Status=Pending; Balance=; Classification=}
+16/07/2024 06:19:58 AM -  - I commented out the line that bugs.
+16/07/2024 06:19:59 AM - ImportAccountHistory - After trimming extraneous months and years there are 43.
+16/07/2024 06:19:59 AM - ImportExistingBudget - Importing budget data from 2024Budget.xlsx
+16/07/2024 06:19:59 AM - ImportExistingBudget - abbmonthName is Jul
+16/07/2024 06:19:59 AM - ImportExistingBudget - xlsx path is: C:\Users\jfluckiger\OneDrive\Budget\2024Budget.xlsx
+16/07/2024 06:20:00 AM - Deduplicate - There are 38 items in the existing budget.
+16/07/2024 06:20:00 AM - Deduplicate - There are 34 duplicates.
+16/07/2024 06:20:00 AM - Deduplicate - There are 9 expenses before arbitrary exceptions.
+16/07/2024 06:20:00 AM - ArbitraryExceptionsRemove - Removed 4 arbitrary exceptions.
+16/07/2024 06:20:00 AM - ExportExpenses - Exporting 5 expenses to xlsx.
+16/07/2024 06:20:00 AM - ExportExpenses - Export to csv successful.
+16/07/2024 06:20:00 AM - DeleteAccountHistoryFiles - Deleting C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory.csv C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory (1).csv[0] and C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory.csv C:\Users\jfluckiger\OneDrive\Budget\AccountHistory\AccountHistory (1).csv[1]
