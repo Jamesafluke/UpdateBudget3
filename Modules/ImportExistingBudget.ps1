@@ -6,13 +6,6 @@ function ImportExistingBudget{
         $month #for $abbMonthName for worksheet of xlsx.
     )
 
-    #Determine csv or xlsx.   
-    # $userInput = Read-Host "c for local csv, x for 2023Budget.xlsx"
-    # if($userInput -eq "c"){
-    #     $source = "csv"
-    # }elseif($userInput -eq "x"){
-    #     $source = "xlsx"
-    # }
     $source = "xlsx"
 
     if($source -eq "csv"){
@@ -28,12 +21,16 @@ function ImportExistingBudget{
         
         #Determine path.
         $xlsxPath = (GetXlsxPath)
-        LogMessage $MyInvocation.MyCommand.Name "Importing budget data from 2024Budget.xlsx"
-        LogMessage $MyInvocation.MyCommand.Name "abbmonthName is $abbMonthName"
+        LogMessage $MyInvocation.MyCommand.Name "Importing budget data from 2025Budget.xlsx"
+        LogMessage $MyInvocation.MyCommand.Name "abboMonthName is $abbMonthName"
         LogMessage $MyInvocation.MyCommand.Name "xlsx path is: $xlsxPath"
         while($true){
             try{
-                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -NoHeader -ImportColumns @(20,21,22,23,24,25) -startrow 8 -endrow 200
+                Write-Host $xlsxPath
+                Write-Host $abbMonthName
+                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName  
+                # $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -NoHeader -ImportColumns @(20,21,22,23,24,25) -startrow 8 -endrow 200
+                Write-Host $rawXlsxData
                 break
             }catch{
                 $userInput = Read-Host "Importing Excel data failed. Make sure it's closed. Try again? y/n"

@@ -9,26 +9,19 @@ function Deduplicate{
 
     $duplicateCount = 0
     foreach ($entry in $accountHistory) {
-        $postDate = $entry."Post Date"
-        $debit = [decimal]$entry."Debit"
-        $credit = [decimal]$entry."Credit"
+        $postingDate = $entry."Posting Date"
+        $amount = [decimal]$entry."Amount"
+        $amount = $amount * -1
 
-        #Set $amount.
-        $amount = $null
-        if ($debit -ne ""){
-            $amount = $debit
-        }else{
-            $amount = $credit * -1
-        }
-        
+
         # Check if there's a matching entry in existing budget data
-        $duplicateEntry = $existingBudget | Where-Object { $_.Date -eq $postDate -and [decimal]$_.Amount -eq $amount}
+        $duplicateEntry = $existingBudget | Where-Object { $_.Date -eq $postingDate -and [decimal]$_.Amount -eq $amount}
 
         if ($null -eq $duplicateEntry){ #If it isn't a duplicate entry, add it.
             # Add date, item, and amount. ()
 
             $newExpense = [PSCustomObject]@{
-                Date = $entry."Post Date"
+                Date = $entry."Posting Date"
                 Item = $entry.Description
                 Description = ""
                 Method = $entry."Account Number"

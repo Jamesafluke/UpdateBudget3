@@ -1,6 +1,5 @@
 # . "$PSScriptRoot\Modules\*.ps1" #Doesn't work.
 . "$PSScriptRoot\Modules\LogMessage.ps1"
-. "$PSScriptRoot\Modules\SetAccountHistoryPaths.ps1"
 # . "$PSScriptRoot\Modules\CheckExistingAccountHistory.ps1"
 . "$PSScriptRoot\Modules\StartAhk.ps1"
 . "$PSScriptRoot\Modules\SelectMonth.ps1"
@@ -22,14 +21,14 @@ $outputPath = "$PSScriptRoot\output.csv"
 
 function Main {
 
-    LogMessage $MyInvocation.MyCommand.Name "Welcome to Budginator!"
+    LogMessage $MyInvocation.MyCommand.Name "Welcome to Update Budget 3!"
     LogMessage $MyInvocation.MyCommand.Name "Backlog: Write a function that imports the data directly into the budget instead of to output.csv"
     LogMessage $MyInvocation.MyCommand.Name "Backlog: Include an auto LastUpdated field on the budget."
 
     # LogMessage $MyInvocation.MyCommand.Name "Backlog: Make it laptop/desktop (screen resolution) agnostic. It already is, but the residual code should be removed. But wait, maybe it's not that simple. As long as I'm using OneDrive this will be necessary?"
 
-    $accountHistoryPath = SetAccountHistoryPath
-
+    $accountHistoryPath1 = "C:\Users\jfluckiger\Downloads\ExportedTransactions.csv"
+    $accountHistoryPath2 = "C:\Users\jfluckiger\Downloads\ExportedTransactions(1).csv"
     # CheckExistingAccountHistory $accountHistoryPaths
 
     #Commenting this because I don't use it.
@@ -41,7 +40,9 @@ function Main {
     # LogMessage $MyInvocation.MyCommand.Name $year
 
 
-    $accountHistory = ImportAccountHistory $year $month $accountHistoryPath
+    $accountHistory = ImportAccountHistory $year $month $accountHistoryPath1
+
+    $accountHistory += ImportAccountHistory $year $month $accountHistoryPath2
 
     $existingBudget = ImportExistingBudget $month
 
@@ -57,12 +58,11 @@ function Main {
 
     ExportExpenses $verifiedExpenses $outputPath
 
-    DeleteAccountHistoryFiles $accountHistoryPaths
+    # DeleteAccountHistoryFiles $accountHistoryPaths
 
     OpenOutput $outputPath
 
     OpenXlsx $(GetXlsxPath)
-
 }
 
 

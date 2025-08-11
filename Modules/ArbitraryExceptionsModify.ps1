@@ -4,6 +4,22 @@ function ArbitraryExceptionsModify {
     )
 
     forEach($entry in $verifiedExpenses){
+        #This works.
+        if ($entry.Item.Contains("Share")){
+            Write-Host "blah3"
+        }
+        if ($entry.Item.Contains("Withdrawal ACH C TYPE: DONATION CO: Ch JesusChrist")){
+            Write-Host "Fast offering"
+            $entry.Item = "Fast offering"
+            $entry.Description = "Fast offering"
+            $entry.Category= "Fast offering"
+        }
+
+        $entry.Item = $entry.Item.Replace("Loan Advance Cre ","")
+        $entry.Item = $entry.Item.Replace("Rewards from Amazon Marketplace","Amazon Return")
+
+
+        #Old stuff below. Probably not helpful anymore. 11/24
         if ($entry.Item -eq "loanDepot") {
             $entry.Description = "Mortgage"
             $entry.Category = "Mortgage"
@@ -47,7 +63,7 @@ function ArbitraryExceptionsModify {
             $entry.Description = "Phones"
             $entry.Category = "Phones"
         }
-        if ($entry.Item -eq "YouTube Premium") {
+        if ($entry.Item -eq "Payment to Youtube Premium") {
             $entry.Description = "YouTube Premium"
             $entry.Category = "YouTube Premium"
         }
@@ -71,25 +87,14 @@ function ArbitraryExceptionsModify {
             $entry.Description = "Gasoline"
             $entry.Category = "Gasoline"
         }
-
-
-
-
-        
-
-        
-
+        if ($entry.Item -eq "Fidelity Investments") {
+            $entry.Description = "This will become millions"
+            $entry.Category = "Investments"
+        }
+        if ($entry.Item -eq "Payment to Rocky Mountain Power") {
+            $entry.Description = "Power!"
+            $entry.Category = "Electricity"
+        }
     }
-    #Remove some entries.
-    # for ($i = $verifiedExpenses.Count - 1; $i -ge 0; $i--) {
-    #     if ($verifiedExpenses[$i].Item -eq "Fluckiger") {
-    #         $verifiedExpenses.RemoveAt($i)
-    #     }
-    # }
-    # $verifiedExpenses = $verifiedExpenses | Where-Object {
-    #     $entry.Description = "Fluckiger"
-    # }
-
-
     return $verifiedExpenses
 }

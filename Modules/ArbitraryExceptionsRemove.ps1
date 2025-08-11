@@ -22,13 +22,22 @@ function ArbitraryExceptionsRemove {
         elseif($item.Item -eq "loanDepot"){
             $remove = $true
         }
+        elseif($item.Item -eq "Payment to Loandepot"){
+            $remove = $true
+        }
         elseif($item.Item -eq "Transfer To 100109572900"){
             $remove = $true
         }
         elseif($item.Item -eq "Transfer To 2900"){
             $remove = $true
         }
-        
+        elseif($item.Item -eq "Salary/Regular Income from Insight Global"){
+            $remove = $true
+        }
+        elseif($item.Item -eq "Withdrawal Trans"){
+            $remove = $true
+        }
+                
         
 
 
