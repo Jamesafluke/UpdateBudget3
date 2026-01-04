@@ -22,14 +22,14 @@ function ImportExistingBudget{
         #Determine path.
         $xlsxPath = (GetXlsxPath)
         LogMessage $MyInvocation.MyCommand.Name "Importing budget data from 2025Budget.xlsx"
-        LogMessage $MyInvocation.MyCommand.Name "abboMonthName is $abbMonthName"
+        LogMessage $MyInvocation.MyCommand.Name "abbMonthName is $abbMonthName"
         LogMessage $MyInvocation.MyCommand.Name "xlsx path is: $xlsxPath"
         while($true){
             try{
                 Write-Host $xlsxPath
                 Write-Host $abbMonthName
-                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName  
-                # $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -NoHeader -ImportColumns @(20,21,22,23,24,25) -startrow 8 -endrow 200
+                #$rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName  
+                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -NoHeader -ImportColumns @(20,21,22,23,24,25) -startrow 8 -endrow 200
                 Write-Host $rawXlsxData
                 break
             }catch{

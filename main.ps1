@@ -27,8 +27,8 @@ function Main {
 
     # LogMessage $MyInvocation.MyCommand.Name "Backlog: Make it laptop/desktop (screen resolution) agnostic. It already is, but the residual code should be removed. But wait, maybe it's not that simple. As long as I'm using OneDrive this will be necessary?"
 
-    $accountHistoryPath1 = "C:\Users\jfluckiger\Downloads\ExportedTransactions.csv"
-    $accountHistoryPath2 = "C:\Users\jfluckiger\Downloads\ExportedTransactions(1).csv"
+    $accountHistoryPath1 = "C:\Users\v-fluckigerj\Downloads\ExportedTransactions.csv"
+    $accountHistoryPath2 = "C:\Users\v-fluckigerj\Downloads\ExportedTransactions (1).csv"
     # CheckExistingAccountHistory $accountHistoryPaths
 
     #Commenting this because I don't use it.
