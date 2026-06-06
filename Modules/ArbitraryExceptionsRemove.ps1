@@ -43,7 +43,15 @@ function ArbitraryExceptionsRemove {
         elseif ($item.Item -eq "From Share 50") {
             $remove = $true
         }
-
+        elseif ($item.Item -eq "Salary/Regular Income from Halo") {
+            $remove = $true
+        }
+        elseif ($item.Item -eq "Deposit Ach 1563 Type: Payroll CO: XX6350 Cloudbees Entry Class Code: Ach Trace Number: 1") {
+            $remove = $true
+        }
+        elseif ($item.Item -eq "Ach Deposit Comment: Type: Payroll CO: Halomd, Llc - Halomd, Llc") {
+            $remove = $true
+        }
                 
         
 

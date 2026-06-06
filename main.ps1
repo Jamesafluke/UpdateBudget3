@@ -58,9 +58,9 @@ function Main {
 
     ExportExpenses $verifiedExpenses $outputPath
 
-    # DeleteAccountHistoryFiles $accountHistoryPaths
+    DeleteAccountHistoryFiles $accountHistoryPaths
 
-    # OpenOutput $outputPath
+    OpenOutput $outputPath
 
     # OpenXlsx $(GetXlsxPath)
 }
