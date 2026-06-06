@@ -38,31 +38,37 @@ function ImportExistingBudget {
             try {
                 Write-Host $xlsxPath
                 Write-Host $abbMonthName
-                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -HeaderName @("Date", "Item", "Description", "Method", "Category", "Amount") -ImportColumns @(20, 21, 22, 23, 24, 25) -startrow 8 -endrow 200
-                Write-Host $rawXlsxData
+                # Columns T-Y correspond to indices 20-25. 
+                # Since headers are on row 7, we start importing data from row 8.
+                $rawXlsxData = Import-Excel $xlsxPath -WorksheetName $abbMonthName -HeaderName @("Date", "Item", "Description", "Method", "Category", "Amount") -ImportColumns @(20, 21, 22, 23, 24, 25) -StartRow 8 -EndRow 200
+                # Write-Host $rawXlsxData
                 break
             }
             catch {
+                Write-Warning "Failed to import Excel: $($_.Exception.Message)"
                 $userInput = Read-Host "Importing Excel data failed. Make sure it's closed. Try again? y/n"
                 if ($userInput -ne "y") {
-                    exit
+                    return @()
                 }
             }
         }
 
         #Remove blank items. Add to refined data.
-        $refinedXlsxData = @()
-        foreach ($item in $rawXlsxData) {
+        $refinedXlsxData = foreach ($item in $rawXlsxData) {
             if ($null -ne $item.Date) {
-                $nonBlankExpense = [PSCustomObject]@{
-                    Date        = (Get-Date $item.Date -Format "MM/dd/yyyy")
-                    Item        = $item.Item
-                    Description = $item.Description
-                    Method      = $item.Method
-                    Category    = $item.Category
-                    Amount      = [decimal]$item.Amount
+                try {
+                    [PSCustomObject]@{
+                        Date        = (Get-Date $item.Date -Format "MM/dd/yyyy")
+                        Item        = [string]$item.Item
+                        Description = [string]$item.Description
+                        Method      = [string]$item.Method
+                        Category    = [string]$item.Category
+                        Amount      = [decimal]("$($item.Amount)" -replace '[^\d.-]', '')
+                    }
                 }
-                $refinedXlsxData += $nonBlankExpense
+                catch {
+                    Write-Warning "Skipping row with invalid data: $($item.Date) - $($item.Amount)"
+                }
             }
         }
         # $i = 1

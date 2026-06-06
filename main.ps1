@@ -62,7 +62,7 @@ function Main {
 
     OpenOutput $outputPath
 
-    OpenXlsx $(GetXlsxPath)
+    # OpenXlsx $(GetXlsxPath)
 }
 
 

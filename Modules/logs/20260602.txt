@@ -49,3 +49,37 @@
 02/06/2026 19:15:06 PM - Deduplicate - There are 0 expenses before arbitrary exceptions.
 02/06/2026 19:15:06 PM - ArbitraryExceptionsRemove - Removed 0 arbitrary exceptions.
 02/06/2026 19:15:06 PM - ExportExpenses - No expenses to export.
+02/06/2026 19:28:14 PM - Main - Welcome to Update Budget 3!
+02/06/2026 19:28:14 PM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+02/06/2026 19:28:14 PM - Main - Backlog: Include an auto LastUpdated field on the budget.
+02/06/2026 19:28:17 PM - SelectMonth - Selected month is March
+02/06/2026 19:28:17 PM - ImportAccountHistory - 72 items in ExportedTransactions
+02/06/2026 19:28:17 PM - ImportAccountHistory - After trimming extraneous months and years there are 0.
+02/06/2026 19:28:17 PM - ImportAccountHistory - 306 items in ExportedTransactions
+02/06/2026 19:28:17 PM - ImportAccountHistory - After trimming extraneous months and years there are 0.
+02/06/2026 19:28:17 PM - ImportExistingBudget - ImportExcel module found.
+02/06/2026 19:28:17 PM - ImportExistingBudget - Importing budget data from 2026Budget.xlsx
+02/06/2026 19:28:17 PM - ImportExistingBudget - abbMonthName is Mar
+02/06/2026 19:28:17 PM - ImportExistingBudget - xlsx path is: C:\Users\james\OneDrive\Budget\2026Budget.xlsx
+02/06/2026 19:28:17 PM - Deduplicate - There are 28 items in the existing budget.
+02/06/2026 19:28:17 PM - Deduplicate - There are 0 duplicates.
+02/06/2026 19:28:17 PM - Deduplicate - There are 0 expenses before arbitrary exceptions.
+02/06/2026 19:28:17 PM - ArbitraryExceptionsRemove - Removed 0 arbitrary exceptions.
+02/06/2026 19:28:17 PM - ExportExpenses - No expenses to export.
+02/06/2026 19:36:53 PM - Main - Welcome to Update Budget 3!
+02/06/2026 19:36:53 PM - Main - Backlog: Write a function that imports the data directly into the budget instead of to output.csv
+02/06/2026 19:36:53 PM - Main - Backlog: Include an auto LastUpdated field on the budget.
+02/06/2026 19:36:56 PM - SelectMonth - Selected month is March
+02/06/2026 19:36:56 PM - ImportAccountHistory - 72 items in ExportedTransactions
+02/06/2026 19:36:56 PM - ImportAccountHistory - After trimming extraneous months and years there are 0.
+02/06/2026 19:36:56 PM - ImportAccountHistory - 306 items in ExportedTransactions
+02/06/2026 19:36:56 PM - ImportAccountHistory - After trimming extraneous months and years there are 0.
+02/06/2026 19:36:56 PM - ImportExistingBudget - ImportExcel module found.
+02/06/2026 19:36:56 PM - ImportExistingBudget - Importing budget data from 2026Budget.xlsx
+02/06/2026 19:36:56 PM - ImportExistingBudget - abbMonthName is Mar
+02/06/2026 19:36:56 PM - ImportExistingBudget - xlsx path is: C:\Users\james\OneDrive\Budget\2026Budget.xlsx
+02/06/2026 19:36:56 PM - Deduplicate - There are 29 items in the existing budget.
+02/06/2026 19:36:56 PM - Deduplicate - There are 0 duplicates.
+02/06/2026 19:36:56 PM - Deduplicate - There are 0 expenses before arbitrary exceptions.
+02/06/2026 19:36:56 PM - ArbitraryExceptionsRemove - Removed 0 arbitrary exceptions.
+02/06/2026 19:36:56 PM - ExportExpenses - No expenses to export.

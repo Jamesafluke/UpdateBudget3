@@ -1,4 +1,4 @@
 function SelectYear{
-    $year = "2025"
+    $year = "2026"
     return [int]$year
 }
