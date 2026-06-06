@@ -60,7 +60,7 @@ function Main {
 
     # DeleteAccountHistoryFiles $accountHistoryPaths
 
-    OpenOutput $outputPath
+    # OpenOutput $outputPath
 
     # OpenXlsx $(GetXlsxPath)
 }

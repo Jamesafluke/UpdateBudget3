@@ -5,43 +5,50 @@ function ArbitraryExceptionsRemove {
 
     $trimmedExpenses = @()
 
-    foreach($item in $verifiedExpenses){
+    foreach ($item in $verifiedExpenses) {
         $remove = $false
-        if($item.Item -eq "Fluckiger"){
+        if ($item.Item -eq "Fluckiger") {
             $remove = $true
         }
-        elseif($item.Item -eq "Credit Card Payment"){
+        elseif ($item.Item -eq "Credit Card Payment") {
             $remove = $true
         }
-        elseif($item.Item -eq "Dep Cloud Bee Direct Deposit"){
+        elseif ($item.Item -eq "Dep Cloud Bee Direct Deposit") {
             $remove = $true
         }
-        elseif($item.Item -eq "Dep Cloudbees Direct Deposit"){
+        elseif ($item.Item -eq "Dep Cloudbees Direct Deposit") {
             $remove = $true
         }
-        elseif($item.Item -eq "loanDepot"){
+        elseif ($item.Item -eq "loanDepot") {
             $remove = $true
         }
-        elseif($item.Item -eq "Payment to Loandepot"){
+        elseif ($item.Item -eq "Payment to Loandepot") {
             $remove = $true
         }
-        elseif($item.Item -eq "Transfer To 100109572900"){
+        elseif ($item.Item -eq "Transfer To 100109572900") {
             $remove = $true
         }
-        elseif($item.Item -eq "Transfer To 2900"){
+        elseif ($item.Item -eq "Transfer To 2900") {
             $remove = $true
         }
-        elseif($item.Item -eq "Salary/Regular Income from Insight Global"){
+        elseif ($item.Item -eq "Salary/Regular Income from Insight Global") {
             $remove = $true
         }
-        elseif($item.Item -eq "Withdrawal Trans"){
+        elseif ($item.Item -eq "Withdrawal Trans") {
             $remove = $true
         }
+        elseif ($item.Item -eq "Salary/Regular Income from Classic Vacations") {
+            $remove = $true
+        }
+        elseif ($item.Item -eq "From Share 50") {
+            $remove = $true
+        }
+
                 
         
 
 
-        if($remove -ne $true){
+        if ($remove -ne $true) {
             $trimmedExpenses += $item
         }
 

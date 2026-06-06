@@ -31,6 +31,7 @@ function ArbitraryExceptionsModify {
             $entry.Description = "Electricity"
             $entry.Category = "Electricity"
         }
+
         if ($entry.Item -eq "Tooele City Corpor Ut Visa") {
             $entry.Description = "Utilities"
             $entry.Category = "Utilities"
@@ -94,6 +95,14 @@ function ArbitraryExceptionsModify {
         if ($entry.Item -eq "Payment to Rocky Mountain Power") {
             $entry.Description = "Power!"
             $entry.Category = "Electricity"
+        }
+        if ($entry.Item -eq "Payment to Dominion Energy") {
+            $entry.Description = "Dominion"
+            $entry.Category = "Dominion"
+        }
+        if ($entry.Item -eq "Payment to xfinity") {
+            $entry.Description = "Internet"
+            $entry.Category = "Internet"
         }
     }
     return $verifiedExpenses
