@@ -52,8 +52,15 @@ function ArbitraryExceptionsRemove {
         elseif ($item.Item -eq "Ach Deposit Comment: Type: Payroll CO: Halomd, Llc - Halomd, Llc") {
             $remove = $true
         }
-                
-        
+        elseif ($item.Item -eq "Ach Deposit Company: Halomd, Llc Entry: Payroll Fluckiger James") {
+            $remove = $true
+        }
+        elseif ($item.Item -eq "Withdrawal Transfer To L0001") {
+            $remove = $true
+        }
+        elseif ($item.Item -eq "Credit Card Payment Received") {
+            $remove = $true
+        }
 
 
         if ($remove -ne $true) {
