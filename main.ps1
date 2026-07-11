@@ -58,7 +58,7 @@ function Main {
 
     ExportExpenses $verifiedExpenses $outputPath
 
-    DeleteAccountHistoryFiles $accountHistoryPaths
+    DeleteAccountHistoryFiles $accountHistoryPath1 $accountHistoryPath2
 
     OpenOutput $outputPath
 

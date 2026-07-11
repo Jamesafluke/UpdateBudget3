@@ -8,13 +8,13 @@ function DeleteAccountHistoryFiles {
         # Check and delete the first file
         if ($Path1 -and (Test-Path -Path $Path1 -PathType Leaf)) {
             LogMessage $MyInvocation.MyCommand.Name "Deleting $Path1"
-            Remove-ItemSafely $Path1
+            Remove-Item $Path1
         }
 
         # Check and delete the second file
         if ($Path2 -and (Test-Path -Path $Path2 -PathType Leaf)) {
             LogMessage $MyInvocation.MyCommand.Name "Deleting $Path2"
-            Remove-ItemSafely $Path2
+            Remove-Item $Path2
         }
     }
 }
