@@ -3,20 +3,20 @@ function ArbitraryExceptionsModify {
         $verifiedExpenses
     )
 
-    forEach($entry in $verifiedExpenses){
+    forEach ($entry in $verifiedExpenses) {
         #This works.
-        if ($entry.Item.Contains("Share")){
+        if ($entry.Item.Contains("Share")) {
             Write-Host "blah3"
         }
-        if ($entry.Item.Contains("Withdrawal ACH C TYPE: DONATION CO: Ch JesusChrist")){
+        if ($entry.Item.Contains("Withdrawal ACH C TYPE: DONATION CO: Ch JesusChrist")) {
             Write-Host "Fast offering"
             $entry.Item = "Fast offering"
             $entry.Description = "Fast offering"
-            $entry.Category= "Fast offering"
+            $entry.Category = "Fast offering"
         }
 
-        $entry.Item = $entry.Item.Replace("Loan Advance Cre ","")
-        $entry.Item = $entry.Item.Replace("Rewards from Amazon Marketplace","Amazon Return")
+        $entry.Item = $entry.Item.Replace("Loan Advance Cre ", "")
+        $entry.Item = $entry.Item.Replace("Rewards from Amazon Marketplace", "Amazon Return")
 
 
         #Old stuff below. Probably not helpful anymore. 11/24
@@ -71,7 +71,8 @@ function ArbitraryExceptionsModify {
             $entry.Description = "Gasoline"
             $entry.Category = "Gasoline"
         }
-        if ($entry.Item -eq "Comcast") { # Irrelevant after Tooele Move?
+        if ($entry.Item -eq "Comcast") {
+            # Irrelevant after Tooele Move?
             $entry.Description = "Internet"
             $entry.Category = "Internet"
         }
@@ -105,6 +106,9 @@ function ArbitraryExceptionsModify {
         }
         if ($entry.Item -eq "Smith's") {
             $entry.Category = "Groceries"
+        }
+        if ($entry.Item -eq "Smith's Fuel") {
+            $entry.Category = "Gasoline"
         }
     }
     return $verifiedExpenses
