@@ -61,6 +61,9 @@ function ArbitraryExceptionsRemove {
         elseif ($item.Item -eq "Credit Card Payment Received") {
             $remove = $true
         }
+        elseif ($item.Item -eq "Ach Deposit Company: Insight Global L Entry: Payroll Fluckiger James") {
+            $remove = $true
+        }
 
 
         if ($remove -ne $true) {
