@@ -110,6 +110,9 @@ function ArbitraryExceptionsModify {
         if ($entry.Item -eq "Smith's Fuel") {
             $entry.Category = "Gasoline"
         }
+        if ($entry.Item -eq "Holiday") {
+            $entry.Category = "Gasoline"
+        }
     }
     return $verifiedExpenses
 }
